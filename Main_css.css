@@ -1,0 +1,244 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+footer
+{
+	height: 50px;
+	width: 100%;
+	background-color: #222;
+	position: fixed;
+	z-index: 9;
+}
+a
+{
+	text-align: center;
+}
+.Header > li
+{
+	height: 50px;
+    width: 15%;
+    border: 1px solid #666;
+    border-top: none;
+    border-bottom: none;
+    margin-right: -1px;
+    float: left;
+    cursor: pointer;
+    display: inline-block;
+}
+.Header > li > a
+{
+	height: 50px;
+    color: #eee;
+    font-size: 20px;
+    line-height: 50px;
+    display: block;	
+}
+.Header > li > a:hover
+{
+	background-color: #666;
+}
+.Background
+{
+	height: 100vh;
+	background-image: url(Images/Background.jpg);
+	background-size: cover;
+	
+}
+.Nav
+{
+	top: 50%;
+	right: 0px;
+	position: fixed;
+}
+.Nav > ul > li
+{
+	height: 8px;
+	width: 8px;
+	margin: 8px;
+	background-color: #666;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px rgba(22, 22, 22, 1) inset;
+	list-style-type: none;
+}
+.Nav > ul > .Active
+{
+	background-color: #eee;
+}
+.Frame
+{
+	height: 80%;
+	width: 90%;
+	margin-top: 70px;
+	margin-left: 5%;
+	color: #eee;
+	position: absolute;
+
+}
+.Title
+{
+	font-size: 32px;
+	font-weight: bold;
+}
+.RoomLink
+{
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+}
+hr
+{
+	border: 0;
+	height: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #666;
+}
+p.Introduce::first-letter
+{
+	text-indent: 20px;
+	color: white;
+	font-size: 200%;
+}
+.TextAreaI
+{
+	height: 100%;
+	width: 30%;
+	font-size: 16px;
+	color: white;
+	float: left;
+	display: table;
+}
+.TextAreaII
+{
+	height: 25%;
+	width: 50%;
+	color: white;
+	float: left;
+	display: table;
+}
+.TextAreaIII
+{
+	height: 25%;
+	width: 50%;
+	color: white;
+	float: right;
+	display: table;
+}
+.TextAreaIV
+{
+	height: 100%;
+	width: 80%;
+	color: white;
+	margin: auto;
+	display: table;
+}
+.ImageBoxI
+{
+	height: 100%;
+	width: 65%;
+	line-height: 100%;
+	float: right;
+	display: table;
+}
+.ImageBoxII
+{
+	height: 75%;
+	width: 48%;
+	line-height: 100%;
+	float: left;
+	display: table;
+}
+.ImageBoxIII
+{
+	height: 75%;
+	width: 48%;
+	line-height: 100%;
+	float: right;
+	display: table;
+}
+.ImageBoxIV
+{
+	width: 40%;
+	line-height: 100%;
+	margin: auto;
+	display: table;
+}
+.Center
+{
+	width: 100%;
+	text-align: center;
+	display:table-cell;
+	vertical-align: middle;
+}
+.HorizontalCenter
+{
+	width: 100%;
+	text-align: center;
+}
+.FirstImages
+{
+	width: 100%;
+	opacity: 0;
+	display: none;
+}
+.SecondImages
+{
+	width: 100%;
+	display: none;
+}
+.ThirdImages
+{
+	width: 100%;
+	display: none;
+}
+.NormalImage
+{
+	width: 100%;
+	display: block;
+}
+.Button
+{
+	padding: 5px 10px;
+	border: 2px solid #666;
+	margin: 5px 5px 0px;
+	display: inline-block;
+	cursor: pointer;
+}
+.Button:hover
+{
+	background-color: #666;
+}
+.Column
+{
+	width: 30%;
+	padding: 10px;
+	margin-top: 5%;
+	margin-left: 10%;
+	float: left;
+}
+table
+{
+	border-collapse: collapse;
+}
+table, tr, td
+{
+	padding: 5px 20px; 
+	border: 2px solid #666;
+}
+@media screen and (max-width: 640px)
+{
+    .Header > li > a
+    {
+        font-size: 10px;
+    }
+    .Title
+    {
+    	font-size: 20px;
+    }
+    .ImageBoxIV
+    {
+    	width: 80%;
+    }
+}

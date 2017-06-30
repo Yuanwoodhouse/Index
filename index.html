@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<link rel = "stylesheet" type = "text/css" href = "Main_css.css">
+	</head>
+	<body onresize = "Reset()">
+		<footer>
+			<div role = "tabpanel">
+				<ul class="Header" role = "tablist">
+			        <li><a onclick = "Jump(1)">關於我們</a></li>
+			        <li><a onclick = "Jump(2)">客房介紹</a></li>
+			        <li><a onclick = "Jump(5)">聯絡我們</a></li>
+			        <!--Add-->
+	    		</ul>
+			</div>
+		</footer>
+		<div class = "Container">
+			<div class = "Nav">
+				<ul>
+					<li class = "Active" id = "I" onclick = "Jump(1)"></li>
+					<li id = "II" onclick = "Jump(2)"></li>
+					<li id = "III" onclick = "Jump(3)"></li>
+					<li id = "IV" onclick = "Jump(4)"></li>
+					<li id = "V" onclick = "Jump(5)"></li>
+					<!--Add-->
+				</ul>
+			</div>
+			<div class = "Background" id = "BlockI">
+				<div class = "Frame">
+					<a class = "Title">關於我們</a>
+					<hr>
+					<div class = "TextAreaI">
+						<div class = "Center">
+							<p class = "Introduce">簡介</p>
+						</div>
+					</div>
+					<div class = "ImageBoxI">
+						<div class = "Center">
+							<img class = "FirstImages" src="Images/First/I.jpg">
+							<img class = "FirstImages" src="Images/First/II.jpg">
+							<img class = "FirstImages" src="Images/First/III.jpg">
+							<!--Add-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = "Background" id = "BlockII">
+				<div class = "Frame">
+					<a class = "Title">客房介紹</a>
+					<hr>
+					<div class = "TextAreaII">
+						<div class = "Center">
+							<a class = "RoomLink" onclick = "Jump(3)"">雙人房</a>
+						</div>
+					</div>
+					<div class = "TextAreaIII">
+						<div class = "Center">
+							<a Class = "RoomLink" onclick = "Jump(4)">四人房</a>
+						</div>
+					</div>
+					<div class = "ImageBoxII">
+						<div class = "Center">
+							<img class = "NormalImage" src = "Images/First/I.jpg">
+						</div>
+					</div>
+					<div class = "ImageBoxIII">
+						<div class = "Center">
+							<img class = "NormalImage" src = "Images/First/I.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = "Background" id = "BlockIII">
+				<div class = "Frame">
+					<div class = "HorizontalCenter">
+						<div class = "ImageBoxIV">
+							<img class = "SecondImages" src = "Images/First/I.jpg">
+							<img class = "SecondImages" src = "Images/First/II.jpg">
+							<img class = "SecondImages" src = "Images/First/III.jpg">
+						</div>
+						<div class = "Button" onclick="SecondShift(-1)">&#10094; 上一張</div>
+						<div class = "Button" onclick="SecondShift(1)">下一張 &#10095;</div>
+					</div>
+					<div class = "Column">
+						<table>
+							<tr>
+								<td>平日</td>
+								<td>假日</td>
+								<td>定價</td>
+							</tr>
+							<tr>
+								<td>2000</td>
+								<td>3000</td>
+								<td>4000</td>
+							</tr>
+						</table><br>
+						<a>※ 平日：週日~週五</a><br>
+						<a>※ 假日：週六</a><br>
+						<a>※ 定價：農曆春節期間</a>
+					</div>
+					<div class = "Column">
+						<a>設備</a>
+					</div>
+				</div>
+			</div>
+			<div class = "Background" id = "BlockIV">
+				<div class = "Frame">
+					<div class = "HorizontalCenter">
+						<div class = "ImageBoxIV">
+							<img class = "ThirdImages" src = "Images/First/I.jpg">
+							<img class = "ThirdImages" src = "Images/First/II.jpg">
+							<img class = "ThirdImages" src = "Images/First/III.jpg">
+						</div>
+						<div class = "Button" onclick="ThirdShift(-1)">&#10094; 上一張</div>
+						<div class = "Button" onclick="ThirdShift(1)">下一張 &#10095;</div>
+					</div>
+					<div class = "Column">
+						<table>
+							<tr>
+								<td>平日</td>
+								<td>假日</td>
+								<td>定價</td>
+							</tr>
+							<tr>
+								<td>3000</td>
+								<td>4000</td>
+								<td>5000</td>
+							</tr>
+						</table><br>
+						<a>※ 平日：週日~週五</a><br>
+						<a>※ 假日：週六</a><br>
+						<a>※ 定價：農曆春節期間</a>
+					</div>
+					<div class = "Column">
+						<a>設備</a>
+					</div>
+				</div>
+			</div>
+			<div class = "Background" id = "BlockV">
+				<div class = "Frame">
+					<a class = "Title">聯絡我們</a>
+					<hr>
+					<div class = "TextAreaIV">
+						<div class = "Center">
+							<a>聯絡我們</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Add-->
+		</div>
+		<script>
+			var ScrollTop = 0;
+			var BlockIArea = document.getElementById("BlockI").offsetTop;
+			var BlockIIArea = document.getElementById("BlockII").offsetTop;
+			var BlockIIIArea = document.getElementById("BlockIII").offsetTop;
+			var BlockIVArea = document.getElementById("BlockIV").offsetTop;
+			var BlockVArea = document.getElementById("BlockV").offsetTop;
+			<!--Add-->
+			var Current = 0;
+			var JumpActive = 0;
+			var FirstSlideIndex = 0;
+			var FirstSlideLast = 0;
+			var FirstImagesArray = document.getElementsByClassName("FirstImages");
+			var SecondSlideIndex = 0;
+			var SecondImagesArray = document.getElementsByClassName("SecondImages");
+			var ThirdSlideIndex = 0;
+			var ThirdImagesArray = document.getElementsByClassName("ThirdImages");
+			SecondImagesArray[0].style.display = "block";
+			ThirdImagesArray[0].style.display = "block";
+			window.onscroll = function()
+			{
+				setTimeout(ChangePage, 20);
+			};
+
+			Jump(1);
+			FirstSlide();
+
+			function ChangePage()
+			{
+				ScrollTop = window.scrollY;
+				if (!JumpActive)
+				{
+					switch(Current)
+				    {
+				    	case 1:
+				    		if (ScrollTop - BlockIArea > 5)
+				    		{
+				    			Jump(2);
+				    		}
+				    		break;
+				    	case 2:
+				    		if (ScrollTop - BlockIIArea < -5)
+				    		{
+				    			Jump(1);
+				    		}
+				    		else if (ScrollTop - BlockIIArea > 5)
+				    		{
+				    			Jump(3);
+				    		}
+				    		break;
+				    	case 3:
+				    		if (ScrollTop - BlockIIIArea < -5)
+				    		{
+				    			Jump(2);
+				    		}
+				    		else if (ScrollTop - BlockIIIArea > 5)
+				    		{
+				    			Jump(4);
+				    		}
+				    		break;
+				    	case 4:
+				    		if (ScrollTop - BlockIVArea < -5)
+				    		{
+				    			Jump(3);
+				    		}
+				    		else if (ScrollTop - BlockIVArea > 5)
+				    		{
+				    			Jump(5)
+				    		}
+				    		break;
+				    	case 5:
+				    		if (ScrollTop - BlockVArea < -5)
+				    		{
+				    			Jump(4);
+				    		}
+				    		break;
+				    	//--Add--
+				    }
+				}
+			}
+			function Clear(Li)
+			{
+				switch(Li)
+				{
+				    case 1:
+				        document.getElementById("I").className = "";
+				        break;
+				    case 2:
+				        document.getElementById("II").className = "";
+				        break;
+				    case 3:
+				        document.getElementById("III").className = "";
+				        break;
+				    case 4:
+				        document.getElementById("IV").className = "";
+				        break;
+				    case 5 :
+				        document.getElementById("V").className = "";
+				        break;
+				    //--Add--
+				}
+			}
+			function Reset()
+			{
+				setTimeout(function()
+				{
+					BlockIArea = document.getElementById("BlockI").offsetTop;
+					BlockIIArea = document.getElementById("BlockII").offsetTop;
+					BlockIIIArea = document.getElementById("BlockIII").offsetTop;
+					BlockIVArea = document.getElementById("BlockIV").offsetTop;
+					BlockVArea = document.getElementById("BlockV").offsetTop;
+					//--Add--
+					switch(Current)
+					{
+						case 1:
+							window.scrollTo(0, BlockIArea);
+							break;
+						case 2:
+							window.scrollTo(0, BlockIIArea);
+							break;
+						case 3:
+							window.scrollTo(0, BlockIIIArea);
+							break;
+						case 4:
+							window.scrollTo(0, BlockIVArea);
+							break;
+						case 5:
+							window.scrollTo(0, BlockVArea);
+							break;
+						//--Add--
+					}
+				}, 10);
+			}
+			function Jump(Number)
+			{
+				if (!JumpActive)
+				{
+					JumpActive = 1;
+					switch(Number)
+					{
+					    case 1:
+					    	Clear(Current);
+					    	Current = 1;
+					    	document.getElementById("I").className = "Active";
+
+					        var Y = window.scrollY
+					        var ScrollHeight = (BlockIArea - Y)
+					        var ScrollStep = Math.PI / 80
+					        var CosParameter = ScrollHeight / 2;
+							var ScrollCount = 0,
+					        ScrollInterval = setInterval( function()
+					        {
+					        	//if (Math.abs(window.scrollY - BlockIIIArea) >= 1)
+					            if (ScrollCount < 80)
+					            {
+					                ScrollCount = ScrollCount + 1;
+					                var ScrollMargin = CosParameter - CosParameter * Math.cos(ScrollCount * ScrollStep);
+					                window.scrollTo( 0, (Y + ScrollMargin ) );
+					            } 
+					            else
+					            {
+					            	JumpActive = 0;
+					            	clearInterval(ScrollInterval);
+					            }
+					        }, 15);
+					        break;
+					    case 2:
+					    	Clear(Current);
+					    	Current = 2;
+					    	document.getElementById("II").className = "Active";
+
+					        var Y = window.scrollY
+					        var ScrollHeight = (BlockIIArea - Y)
+					        var ScrollStep = Math.PI / 80
+					        var CosParameter = ScrollHeight / 2;
+							var ScrollCount = 0,
+					        ScrollInterval = setInterval( function()
+					        {
+					            if (ScrollCount < 80)
+					            {
+					                ScrollCount = ScrollCount + 1;
+					                var ScrollMargin = CosParameter - CosParameter * Math.cos(ScrollCount * ScrollStep);
+					                window.scrollTo( 0, (Y + ScrollMargin ) );
+					            } 
+					            else
+					            {
+					            	JumpActive = 0;
+					            	clearInterval(ScrollInterval);
+					            }
+					        }, 15);
+					        break;
+					    case 3:
+					    	Clear(Current);
+					    	Current = 3;
+					    	document.getElementById("III").className = "Active";
+
+					    	var Y = window.scrollY
+					        var ScrollHeight = (BlockIIIArea - Y)
+					        var ScrollStep = Math.PI / 80
+					        var CosParameter = ScrollHeight / 2;
+							var ScrollCount = 0,
+					        ScrollInterval = setInterval( function()
+					        {
+					            if (ScrollCount < 80)
+					            {
+					                ScrollCount = ScrollCount + 1;
+					                var ScrollMargin = CosParameter - CosParameter * Math.cos(ScrollCount * ScrollStep);
+					                window.scrollTo( 0, (Y + ScrollMargin ) );
+					            } 
+					            else
+					            {
+					            	JumpActive = 0;
+					            	clearInterval(ScrollInterval);
+					            }
+					        }, 15);
+					        break;
+					    case 4:
+					    	Clear(Current);
+					    	Current = 4;
+					    	document.getElementById("IV").className = "Active";
+
+					    	var Y = window.scrollY
+					        var ScrollHeight = (BlockIVArea - Y)
+					        var ScrollStep = Math.PI / 80
+					        var CosParameter = ScrollHeight / 2;
+							var ScrollCount = 0,
+					        ScrollInterval = setInterval( function()
+					        {
+					            if (ScrollCount < 80)
+					            {
+					                ScrollCount = ScrollCount + 1;
+					                var ScrollMargin = CosParameter - CosParameter * Math.cos(ScrollCount * ScrollStep);
+					                window.scrollTo( 0, (Y + ScrollMargin ) );
+					            } 
+					            else
+					            {
+					            	JumpActive = 0;
+					            	clearInterval(ScrollInterval);
+					            }
+					        }, 15);
+					        break;
+					    case 5:
+					    	Clear(Current);
+					    	Current = 5;
+					    	document.getElementById("V").className = "Active";
+
+					    	var Y = window.scrollY
+					        var ScrollHeight = (BlockVArea - Y)
+					        var ScrollStep = Math.PI / 80
+					        var CosParameter = ScrollHeight / 2;
+							var ScrollCount = 0,
+					        ScrollInterval = setInterval( function()
+					        {
+					            if (ScrollCount < 80)
+					            {
+					                ScrollCount = ScrollCount + 1;
+					                var ScrollMargin = CosParameter - CosParameter * Math.cos(ScrollCount * ScrollStep);
+					                window.scrollTo( 0, (Y + ScrollMargin ) );
+					            } 
+					            else
+					            {
+					            	JumpActive = 0;
+					            	clearInterval(ScrollInterval);
+					            }
+					        }, 15);
+					        break;
+					    //--Add--
+					}
+				}	
+			}
+			function FirstSlide()
+			{
+				var Faded = 0;
+				var Enable = 0;
+				ImagesInterval = setInterval( function()
+		        {
+		            Faded = Faded + 0.1;
+		            FirstImagesArray[FirstSlideLast].style.display = "none";
+		            FirstImagesArray[FirstSlideIndex].style.display = "block";
+
+		            if (Faded <= 1)
+		            {
+		            	FirstImagesArray[FirstSlideIndex].style.opacity = Faded;
+		            }
+		            else
+		            {
+		            	if (!Enable)
+		            	{
+		            		Enable = 1;
+		            		setTimeout( function()
+		            		{
+		            			clearInterval(ImagesInterval);
+				            	FirstSlideLast = FirstSlideIndex;
+				            	FirstSlideIndex++;
+				            	if (FirstSlideIndex >= FirstImagesArray.length)
+				            	{
+				            		FirstSlideIndex = 0;
+				            	}
+				            	FirstSlide();
+		            		}, 5000);
+		            	}
+		            }
+		        }, 100);
+				/*FirstImagesArray[FirstSlideIndex].style.display = "none";
+				FirstSlideIndex++;
+				if (FirstSlideIndex >= FirstImagesArray.length)
+			   	{
+			   		FirstSlideIndex = 0;
+			   	}
+			   	FirstImagesArray[FirstSlideIndex].style.display = "block";
+			    setTimeout(FirstSlide, 5000);*/
+			}
+			function SecondShift(Index)
+			{
+				SecondImagesArray[SecondSlideIndex].style.display = "none";
+				SecondSlideIndex = SecondSlideIndex + Index;
+				if (SecondSlideIndex >= SecondImagesArray.length)
+				{
+					SecondSlideIndex = 0;
+				}
+				else if (SecondSlideIndex < 0)
+				{
+					SecondSlideIndex = SecondImagesArray.length - 1;
+				}
+				SecondImagesArray[SecondSlideIndex].style.display = "block";
+			}
+			function ThirdShift(Index)
+			{
+				ThirdImagesArray[ThirdSlideIndex].style.display = "none";
+				ThirdSlideIndex = ThirdSlideIndex + Index;
+				if (ThirdSlideIndex >= ThirdImagesArray.length)
+				{
+					ThirdSlideIndex = 0;
+				}
+				else if (ThirdSlideIndex < 0)
+				{
+					ThirdSlideIndex = ThirdImagesArray.length - 1;
+				}
+				ThirdImagesArray[ThirdSlideIndex].style.display = "block";
+			}
+		</script>
+
+	</body>
+</html>
