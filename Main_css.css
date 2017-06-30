@@ -81,11 +81,19 @@ a
 	font-weight: bold;
 	font-family: 標楷體;
 }
+.Gallery
+{
+	width: 45%;
+	height: 85%;
+	margin-left: 3%;
+	float: left;
+	display: table;
+}
 .RoomLink
 {
-	font-size: 24px;
+	padding: 20px;
+	font-size: 36px;
 	font-weight: bold;
-	cursor: pointer;
 }
 hr
 {
@@ -100,13 +108,13 @@ p.Introduce::first-letter
 	color: white;
 	font-size: 200%;
 }
-p.Introduce
+.Introduce
 {
 	text-indent: 25px;
 }
 .TextAreaI
 {
-	height: 100%;
+	height: 85%;
 	width: 30%;
 	margin-right: 5%;
 	font-size: 16px;
@@ -181,6 +189,16 @@ p.Introduce
 	width: 100%;
 	text-align: center;
 }
+.Border
+{
+	width: 100%;
+	border: 2px solid #888;
+	padding: 5px;
+}
+.Finger
+{
+	cursor: pointer;
+}
 .FirstImages
 {
 	height: auto;
@@ -211,6 +229,14 @@ p.Introduce
 	display: inline-block;
 	cursor: pointer;
 }
+.HeaderList:hover
+{
+	background-color: #888;
+}
+.Border:hover
+{
+	border-color: #fff;
+}
 .Button:hover
 {
 	background-color: #666;
@@ -232,7 +258,7 @@ table, tr, td
 	padding: 5px 20px; 
 	border: 2px solid #666;
 }
-@media screen and (max-width: 640px)
+@media screen and (max-width: 770px)
 {
     .HeaderFont
     {

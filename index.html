@@ -9,13 +9,13 @@
 		<footer>
 			<ul class ="Content">
 		        <li class = "HeaderList">
-		        	<div class = "Center"><p class = "HeaderFont" onclick = "Jump(1)">關於我們</p></div>
+		        	<div class = "Center"><a class = "HeaderFont" onclick = "Jump(1)">關於我們</a></div>
 		        </li>
 		        <li class = "HeaderList">
-		        	<div class = "Center"><p class = "HeaderFont" onclick = "Jump(2)">客房介紹</p></div>
+		        	<div class = "Center"><a class = "HeaderFont" onclick = "Jump(2)">客房介紹</a></div>
 		        </li>
 		        <li class = "HeaderList">
-		        	<div class = "Center"><p class = "HeaderFont" onclick = "Jump(5)">聯絡我們</p></div>
+		        	<div class = "Center"><a class = "HeaderFont" onclick = "Jump(5)">聯絡我們</a></div>
 		        </li>
 		        <!--Add-->
     		</ul>
@@ -33,7 +33,7 @@
 			</div>
 			<div class = "Background" id = "BlockI">
 				<div class = "Frame">
-					<a class = "Title">關於我們</a>
+					<p class = "Title">關於我們</p>
 					<hr>
 					<div class = "TextAreaI">
 						<div class = "Center">
@@ -52,9 +52,25 @@
 			</div>
 			<div class = "Background" id = "BlockII">
 				<div class = "Frame">
-					<a class = "Title">客房介紹</a>
+					<p class = "Title">客房介紹</p>
 					<hr>
-					<div class = "TextAreaII">
+					<div class = "Gallery">
+						<div class = "Center">
+							<div class = "Border">
+								<img class = "NormalImage Finger" src = "Images/First/I.jpg" onclick = "Jump(3)">
+								<div class = "RoomLink Finger"><a>雙人房</a onclick = "Jump(3)"></div>
+							</div>
+						</div>
+					</div>
+					<div class = "Gallery">
+						<div class = "Center">
+							<div class = "Border">
+								<img class = "NormalImage Finger" src = "Images/RoomII/I.jpg" onclick = "Jump(4)">
+								<div class = "RoomLink Finger"><a>四人房</a onclick = "Jump(4)"></div>
+							</div>
+						</div>
+					</div>
+					<!--<div class = "TextAreaII">
 						<div class = "Center">
 							<a class = "RoomLink" onclick = "Jump(3)"">雙人房</a>
 						</div>
@@ -73,7 +89,7 @@
 						<div class = "Center">
 							<img class = "NormalImage" src = "Images/First/I.jpg">
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 			<div class = "Background" id = "BlockIII">
