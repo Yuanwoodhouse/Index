@@ -5,7 +5,7 @@
 }
 footer
 {
-	height: 50px;
+	height: 10%;
 	width: 100%;
 	background-color: #222;
 	position: fixed;
@@ -15,36 +15,11 @@ a
 {
 	text-align: center;
 }
-.Header > li
-{
-	height: 50px;
-    width: 15%;
-    border: 1px solid #666;
-    border-top: none;
-    border-bottom: none;
-    margin-right: -1px;
-    float: left;
-    cursor: pointer;
-    display: inline-block;
-}
-.Header > li > a
-{
-	height: 50px;
-    color: #eee;
-    font-size: 20px;
-    line-height: 50px;
-    display: block;	
-}
-.Header > li > a:hover
-{
-	background-color: #666;
-}
 .Background
 {
 	height: 100vh;
 	background-image: url(Images/Background.jpg);
 	background-size: cover;
-	
 }
 .Nav
 {
@@ -66,20 +41,45 @@ a
 {
 	background-color: #eee;
 }
+.Content
+{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.HeaderList
+{
+	height: 100%;
+    width: 15%;
+    border: 1px solid #888;
+    border-top: none;
+    border-bottom: none;
+    margin-right: -1px;
+    float: left;
+    cursor: pointer;
+    display: table;
+}
+.HeaderFont
+{
+	color: #ddd;
+	font-size: 20px;
+	font-weight: bold;
+}
 .Frame
 {
 	height: 80%;
 	width: 90%;
-	margin-top: 70px;
-	margin-left: 5%;
-	color: #eee;
-	position: absolute;
+	top: 15%;
+	left: 5%;
+	color: #fff;
+	position: relative;
 
 }
 .Title
 {
-	font-size: 32px;
+	font-size: 48px;
 	font-weight: bold;
+	font-family: 標楷體;
 }
 .RoomLink
 {
@@ -92,19 +92,23 @@ hr
 	border: 0;
 	height: 10px;
 	margin-top: 10px;
-	margin-bottom: 10px;
-	background-color: #666;
+	margin-bottom: 15px;
+	background-color: #888;
 }
 p.Introduce::first-letter
 {
-	text-indent: 20px;
 	color: white;
 	font-size: 200%;
+}
+p.Introduce
+{
+	text-indent: 25px;
 }
 .TextAreaI
 {
 	height: 100%;
 	width: 30%;
+	margin-right: 5%;
 	font-size: 16px;
 	color: white;
 	float: left;
@@ -128,7 +132,7 @@ p.Introduce::first-letter
 }
 .TextAreaIV
 {
-	height: 100%;
+	height: 80%;
 	width: 80%;
 	color: white;
 	margin: auto;
@@ -137,9 +141,9 @@ p.Introduce::first-letter
 .ImageBoxI
 {
 	height: 100%;
-	width: 65%;
+	width: 60%;
 	line-height: 100%;
-	float: right;
+	float: left;
 	display: table;
 }
 .ImageBoxII
@@ -169,8 +173,8 @@ p.Introduce::first-letter
 {
 	width: 100%;
 	text-align: center;
-	display:table-cell;
 	vertical-align: middle;
+	display:table-cell;
 }
 .HorizontalCenter
 {
@@ -179,6 +183,7 @@ p.Introduce::first-letter
 }
 .FirstImages
 {
+	height: auto;
 	width: 100%;
 	opacity: 0;
 	display: none;
@@ -229,13 +234,23 @@ table, tr, td
 }
 @media screen and (max-width: 640px)
 {
-    .Header > li > a
+    .HeaderFont
     {
-        font-size: 10px;
+        font-size: 15px;
     }
     .Title
     {
-    	font-size: 20px;
+    	font-size: 36px;
+    }
+    .TextAreaI
+    {
+    	height: 30%;
+		width: 100%;
+    }
+    .ImageBoxI
+    {
+    	height: 60%;
+		width: 100%;
     }
     .ImageBoxIV
     {
