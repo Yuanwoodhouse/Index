@@ -81,6 +81,12 @@ a
 	font-weight: bold;
 	font-family: 標楷體;
 }
+.SubTitle
+{
+	font-size: 26px;
+	font-weight: bold;
+	font-family: 標楷體;
+}
 .Gallery
 {
 	width: 45%;
@@ -96,13 +102,27 @@ a
 	font-weight: bold;
 	font-family: 標楷體;
 }
-hr
+.TitleHr
 {
 	border: 0;
 	height: 10px;
 	margin-top: 10px;
 	margin-bottom: 15px;
 	background-color: #888;
+}
+.SubTitleHr
+{
+	margin: 5px;
+	clear: both;
+}
+.List
+{
+	text-align: left;
+	list-style-type: circle;
+}
+.Text
+{
+	font-size: 20px;
 }
 p.Introduce::first-letter
 {
@@ -125,22 +145,6 @@ p.Introduce::first-letter
 }
 .TextAreaII
 {
-	height: 25%;
-	width: 50%;
-	color: white;
-	float: left;
-	display: table;
-}
-.TextAreaIII
-{
-	height: 25%;
-	width: 50%;
-	color: white;
-	float: right;
-	display: table;
-}
-.TextAreaIV
-{
 	height: 80%;
 	width: 80%;
 	color: white;
@@ -154,29 +158,23 @@ p.Introduce::first-letter
 	line-height: 100%;
 	float: left;
 	display: table;
+	position: relative;
 }
 .ImageBoxII
-{
-	height: 75%;
-	width: 48%;
-	line-height: 100%;
-	float: left;
-	display: table;
-}
-.ImageBoxIII
-{
-	height: 75%;
-	width: 48%;
-	line-height: 100%;
-	float: right;
-	display: table;
-}
-.ImageBoxIV
 {
 	width: 40%;
 	line-height: 100%;
 	margin: auto;
 	display: table;
+}
+.Map
+{
+	height: 80%;
+	width: 60%;
+	line-height: 100%;
+	float: left;
+	display: table;
+	position: relative;
 }
 .Center
 {
@@ -184,6 +182,14 @@ p.Introduce::first-letter
 	text-align: center;
 	vertical-align: middle;
 	display:table-cell;
+}
+.Left
+{
+	float: left;
+}
+.TextLeft
+{
+	text-align: left;
 }
 .HorizontalCenter
 {
@@ -226,12 +232,22 @@ p.Introduce::first-letter
 }
 .Button
 {
-	padding: 5px 10px;
-	border: 2px solid #666;
+	top: 50%;
+	padding: 5px 20px;
+	background-color: #666;
+	border: 2px solid #ddd;
 	margin: 5px 5px 0px;
-	display: inline-block;
+	opacity: 0.5;
 	cursor: pointer;
 	position: absolute;
+}
+.Previous
+{
+	left: 5px;
+}
+.Next
+{
+	right: 5px;
 }
 .HeaderList:hover
 {
@@ -243,7 +259,7 @@ p.Introduce::first-letter
 }
 .Button:hover
 {
-	background-color: #666;
+	opacity: 1;
 }
 .Column
 {
@@ -259,7 +275,7 @@ table
 }
 table, tr, td
 {
-	padding: 5px 20px; 
+	padding: 5px 10px; 
 	border: 2px solid #666;
 }
 @media screen and (max-width: 770px)
@@ -281,22 +297,6 @@ table, tr, td
     {
     	height: 60%;
 		width: 100%;
-    }
-    .Gallery
-    {
-    	width: 80%;
-    	height: 40%;
-    	margin-left: 10%;
-
-    }
-    .NormalImage
-    {
-    	width: 70%;
-    	float: right;
-    }
-    .RoomLink
-    {
-    	font-size: 27px;
     }
     .ImageBoxIV
     {
