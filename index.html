@@ -7,18 +7,19 @@
 	</head>
 	<body onresize = "Reset()">
 		<footer>
-			<ul class ="Content">
+			<ul class ="Content" onclick = "Jump(1)">
+				<img class = "Logo Left" src = "Images/Logo/I.png">
 		        <li class = "HeaderList">
-		        	<div class = "Center"><a class = "HeaderFont" onclick = "Jump(1)">關於我們</a></div>
+		        	<div class = "Center"><a class = "HeaderFont">關於我們</a></div>
 		        </li>
-		        <li class = "HeaderList">
-		        	<div class = "Center"><a class = "HeaderFont" onclick = "Jump(2)">客房介紹</a></div>
+		        <li class = "HeaderList" onclick = "Jump(2)">
+		        	<div class = "Center"><a class = "HeaderFont">客房介紹</a></div>
 		        </li>
-		        <li class = "HeaderList">
-		        	<div class = "Center"><a class = "HeaderFont" onclick = "Jump(5)">住宿須知</a></div>
+		        <li class = "HeaderList" onclick = "Jump(5)">
+		        	<div class = "Center"><a class = "HeaderFont">住宿須知</a></div>
 		        </li>
-		        <li class = "HeaderList">
-		        	<div class = "Center"><a class = "HeaderFont" onclick = "Jump(6)">聯絡我們</a></div>
+		        <li class = "HeaderList" onclick = "Jump(6)">
+		        	<div class = "Center"><a class = "HeaderFont">聯絡我們</a></div>
 		        </li>
 		        <!--Add-->
     		</ul>
@@ -46,10 +47,15 @@
 					</div>
 					<div class = "ImageBoxI">
 						<div class = "Center">
-							<img class = "FirstImages" src="Images/First/I.jpg">
-							<img class = "FirstImages" src="Images/First/II.jpg">
-							<img class = "FirstImages" src="Images/First/III.jpg">
-							<!--Add-->
+							<div class = "Border">
+								<img class = "FirstImages" src="Images/First/I.jpg">
+								<img class = "FirstImages" src="Images/First/II.jpg">
+								<img class = "FirstImages" src="Images/First/III.jpg">
+								<img class = "FirstImages" src="Images/First/IV.jpg">
+								<img class = "FirstImages" src="Images/First/V.jpg">
+								<img class = "FirstImages" src="Images/First/VI.jpg">
+								<!--Add-->
+							</div>
 						</div>
 					</div>
 				</div>
@@ -107,7 +113,7 @@
 								<hr class = "SubTitleHr">
 								<ul class = "List">
 									<li>分離式冷暖氣</li>
-									<li>42吋液晶電視</li>
+									<li>50吋液晶電視</li>
 									<li>高級獨立筒床墊</li>
 									<li>高級羽絨被</li>
 									<li>房內冰箱</li>
@@ -120,12 +126,16 @@
 					</div>
 					<div class = "ImageBoxI">
 						<div class = "Center">
-							<img class = "SecondImages" src="Images/First/I.jpg">
-							<img class = "SecondImages" src="Images/First/II.jpg">
-							<img class = "SecondImages" src="Images/First/III.jpg">
-							<!--Add-->
-							<div class = "Button Previous" onclick="SecondShift(-1)">&#10094;</div>
-							<div class = "Button Next" onclick="SecondShift(1)">&#10095;</div>
+							<div class = "Border">
+								<img class = "SecondImages" src="Images/RoomI/I.jpg">
+								<img class = "SecondImages" src="Images/RoomI/II.jpg">
+								<img class = "SecondImages" src="Images/RoomI/III.jpg">
+								<img class = "SecondImages" src="Images/RoomI/IV.jpg">
+								<img class = "SecondImages" src="Images/RoomI/V.jpg">
+								<!--Add-->
+								<div class = "Button Previous" onclick="SecondShift(-1)">&#10094;</div>
+								<div class = "Button Next" onclick="SecondShift(1)">&#10095;</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -176,12 +186,16 @@
 					</div>
 					<div class = "ImageBoxI">
 						<div class = "Center">
-							<img class = "ThirdImages" src="Images/RoomII/I.jpg">
-							<img class = "ThirdImages" src="Images/RoomII/II.jpg">
-							<img class = "ThirdImages" src="Images/RoomII/III.jpg">
-							<!--Add-->
-							<div class = "Button Previous" onclick="ThirdShift(-1)">&#10094;</div>
-							<div class = "Button Next" onclick="ThirdShift(1)">&#10095;</div>
+							<div class = "Border">
+								<img class = "ThirdImages" src="Images/RoomII/I.jpg">
+								<img class = "ThirdImages" src="Images/RoomII/II.jpg">
+								<img class = "ThirdImages" src="Images/RoomII/III.jpg">
+								<img class = "ThirdImages" src="Images/RoomII/IV.jpg">
+								<img class = "ThirdImages" src="Images/RoomII/V.jpg">
+								<!--Add-->
+								<div class = "Button Previous" onclick="ThirdShift(-1)">&#10094;</div>
+								<div class = "Button Next" onclick="ThirdShift(1)">&#10095;</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -236,9 +250,13 @@
 					<a class = "Title">聯絡我們</a>
 					<hr  class = "TitleHr">
 					<div class = "TextAreaI">
-						<div class = "Center">
+						<div class = "Center Text">
 							<p class = "TextLeft">專線：0905-385258</p>
 							<p class = "TextLeft">地址：宜蘭縣冬山鄉得安村梅花路1091號 </p>
+							<p class = "TextLeft">
+								<img src = "Images/Logo/Facebook.png">
+								：<a href = "https://www.facebook.com/%E5%AE%9C%E8%98%AD%E6%B0%91%E5%AE%BF-%E7%B7%A3%E6%9C%A8%E5%B1%8B-1880010555598883/">宜蘭民宿 - 緣木屋</a>
+							</p>
 						</div>
 					</div>
 					<div class = "Map">
@@ -286,55 +304,75 @@
 					switch(Current)
 				    {
 				    	case 1:
-				    		if (ScrollTop - BlockIArea > 5)
+				    		if (ScrollTop - BlockIIArea > -50)
 				    		{
-				    			Jump(2);
+				    			Clear(Current);
+				    			Current++;
+				    			document.getElementById("II").className = "Active";
 				    		}
 				    		break;
 				    	case 2:
-				    		if (ScrollTop - BlockIIArea < -5)
+				    		if (ScrollTop - BlockIArea < 50)
 				    		{
-				    			Jump(1);
+				    			Clear(Current);
+				    			Current--;
+				    			document.getElementById("I").className = "Active";
 				    		}
-				    		else if (ScrollTop - BlockIIArea > 5)
+				    		else if (ScrollTop - BlockIIIArea > -50)
 				    		{
-				    			Jump(3);
+				    			Clear(Current);
+				    			Current++;
+				    			document.getElementById("III").className = "Active";
 				    		}
 				    		break;
 				    	case 3:
-				    		if (ScrollTop - BlockIIIArea < -5)
+				    		if (ScrollTop - BlockIIArea < 50)
 				    		{
-				    			Jump(2);
+				    			Clear(Current);
+				    			Current--;
+				    			document.getElementById("II").className = "Active";
 				    		}
-				    		else if (ScrollTop - BlockIIIArea > 5)
+				    		else if (ScrollTop - BlockIVArea > -50)
 				    		{
-				    			Jump(4);
+				    			Clear(Current);
+				    			Current++;
+				    			document.getElementById("IV").className = "Active";
 				    		}
 				    		break;
 				    	case 4:
-				    		if (ScrollTop - BlockIVArea < -5)
+				    		if (ScrollTop - BlockIIIArea < 50)
 				    		{
-				    			Jump(3);
+				    			Clear(Current);
+				    			Current--;
+				    			document.getElementById("III").className = "Active";
 				    		}
-				    		else if (ScrollTop - BlockIVArea > 5)
+				    		else if (ScrollTop - BlockVArea > -50)
 				    		{
-				    			Jump(5)
+				    			Clear(Current);
+				    			Current++;
+				    			document.getElementById("V").className = "Active";
 				    		}
 				    		break;
 				    	case 5:
-				    		if (ScrollTop - BlockVArea < -5)
+				    		if (ScrollTop - BlockIVArea < 50)
 				    		{
-				    			Jump(4);
+				    			Clear(Current);
+				    			Current--;
+				    			document.getElementById("IV").className = "Active";
 				    		}
-				    		else if (ScrollTop - BlockVArea > 5)
+				    		else if (ScrollTop - BlockVIArea > -50)
 				    		{
-				    			Jump(6);
+				    			Clear(Current);
+				    			Current++;
+				    			document.getElementById("VI").className = "Active";
 				    		}
 				    		break;
 				    	case 6:
-				    		if (ScrollTop - BlockVIArea < -5)
+				    		if (ScrollTop - BlockVArea < 50)
 				    		{
-				    			Jump(5);
+				    			Clear(Current);
+				    			Current--;
+				    			document.getElementById("V").className = "Active";
 				    		}
 				    		break;
 				    	//--Add--
@@ -592,7 +630,7 @@
 				            		FirstSlideIndex = 0;
 				            	}
 				            	FirstSlide();
-		            		}, 5000);
+		            		}, 1500);
 		            	}
 		            }
 		        }, 100);
